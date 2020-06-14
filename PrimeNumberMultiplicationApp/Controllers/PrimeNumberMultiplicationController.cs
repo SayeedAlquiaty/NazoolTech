@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using PrimeNumberMultiplicationApp.DTOs;
 using PrimeNumberMultiplicationApp.DTOs.Requests;
 using PrimeNumberMultiplicationApp.Services.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PrimeNumberMultiplicationApp.Controllers

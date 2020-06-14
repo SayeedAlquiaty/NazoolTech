@@ -5,11 +5,7 @@ using PrimeNumberMultiplicationApp.DTOs.Requests;
 using PrimeNumberMultiplicationApp.Services;
 using PrimeNumberMultiplicationApp.Services.Interfaces;
 using PrimeNumberMultiplicationApp.Utilities;
-using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PrimeNumberMultiplicationText.ServicesTests
 {

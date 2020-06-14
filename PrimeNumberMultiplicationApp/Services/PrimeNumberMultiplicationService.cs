@@ -2,10 +2,8 @@
 using PrimeNumberMultiplicationApp.DTOs.Requests;
 using PrimeNumberMultiplicationApp.Services.Interfaces;
 using PrimeNumberMultiplicationApp.Utilities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace PrimeNumberMultiplicationApp.Services

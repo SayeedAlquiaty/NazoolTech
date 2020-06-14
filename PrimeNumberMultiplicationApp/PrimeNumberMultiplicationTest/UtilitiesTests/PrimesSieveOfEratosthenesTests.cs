@@ -1,9 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
 using PrimeNumberMultiplicationApp.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PrimeNumberMultiplicationTest.UtilitiesTests
 {
