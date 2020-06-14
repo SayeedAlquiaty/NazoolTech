@@ -22,10 +22,11 @@ namespace PrimeNumberMultiplicationApp.Controllers
             this.multiplicationService = multiplicationService;
         }
 
-        [HttpGet("{number}")]
-        public async Task<ActionResult<PrimeNumberMultiplicationResponse>> GetPrimeNumberMultiplication(int number)
+        [HttpGet("{n}")]
+        public async Task<ActionResult<PrimeNumberMultiplicationResponse>> GetPrimeNumberMultiplication(int n)
         {
-            var request = new PrimeNumberMultiplicationRequest { Number = number };
+            var request = new PrimeNumberMultiplicationRequest { Number = n };
+
             return await multiplicationService.GetMultiplicationTable(request);
         }
     }
