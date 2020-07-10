@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ProjectsFileReaderApp": {
+      "commandName": "Project",
+      "commandLineArgs": "--file \"D:\\Downloads\\ExampleData.tsv\" --sortByStartDate --project 6"
+    }
+  }
+}
