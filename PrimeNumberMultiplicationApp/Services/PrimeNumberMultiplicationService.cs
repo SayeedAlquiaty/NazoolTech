@@ -17,7 +17,7 @@ namespace PrimeNumberMultiplicationApp.Services
             this.primeNumberGenerator = primeNumberGenerator;
         }
 
-        public async Task<PrimeNumberMultiplicationResponse> GetMultiplicationTable(PrimeNumberMultiplicationRequest request)
+        public async Task<PrimeNumberMultiplicationResponse> GetMultiplicationTableAsync(PrimeNumberMultiplicationRequest request)
         {
             var response = new PrimeNumberMultiplicationResponse();
 

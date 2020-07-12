@@ -31,7 +31,7 @@ namespace PrimeNumberMultiplicationText.ServicesTests
             PrimeNumberMultiplicationRequest request = null;
 
             //Act
-            var response = this.primeNumberMultiplicationService.GetMultiplicationTable(request).Result;
+            var response = this.primeNumberMultiplicationService.GetMultiplicationTableAsync(request).Result;
 
             //Assert
             Assert.AreEqual(response.Errors[0].ErrorMessage,"Invalid request");
@@ -49,7 +49,7 @@ namespace PrimeNumberMultiplicationText.ServicesTests
                 .ReturnsAsync(new List<int> { 2, 3, 5, 7, 11, 13, 17, 23, 29, 31 });
 
             //Act
-            var response = this.primeNumberMultiplicationService.GetMultiplicationTable(request).Result;
+            var response = this.primeNumberMultiplicationService.GetMultiplicationTableAsync(request).Result;
 
             //Assert
             Assert.AreEqual(request.Number + 1, response.Data.Count);
@@ -68,7 +68,7 @@ namespace PrimeNumberMultiplicationText.ServicesTests
                 .ReturnsAsync(new List<int> { 2 });
 
             //Act
-            var response = this.primeNumberMultiplicationService.GetMultiplicationTable(request).Result;
+            var response = this.primeNumberMultiplicationService.GetMultiplicationTableAsync(request).Result;
 
             //Assert
             Assert.AreEqual(request.Number + 1, response.Data.Count);

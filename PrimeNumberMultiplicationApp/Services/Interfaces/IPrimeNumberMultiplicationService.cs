@@ -6,6 +6,6 @@ namespace PrimeNumberMultiplicationApp.Services.Interfaces
 {
     public interface IPrimeNumberMultiplicationService
     {
-        Task<PrimeNumberMultiplicationResponse> GetMultiplicationTable(PrimeNumberMultiplicationRequest request);
+        Task<PrimeNumberMultiplicationResponse> GetMultiplicationTableAsync(PrimeNumberMultiplicationRequest request);
     }
 }

@@ -18,11 +18,11 @@ namespace PrimeNumberMultiplicationApp.Controllers
         }
 
         [HttpGet("{n}")]
-        public async Task<ActionResult<PrimeNumberMultiplicationResponse>> GetPrimeNumberMultiplication(int n)
+        public async Task<ActionResult<PrimeNumberMultiplicationResponse>> GetPrimeNumberMultiplicationAsync(int n)
         {
             var request = new PrimeNumberMultiplicationRequest { Number = n };
 
-            return await multiplicationService.GetMultiplicationTable(request);
+            return await multiplicationService.GetMultiplicationTableAsync(request);
         }
     }
 }
