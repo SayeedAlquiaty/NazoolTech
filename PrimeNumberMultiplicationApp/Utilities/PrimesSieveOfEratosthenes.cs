@@ -7,7 +7,7 @@ namespace PrimeNumberMultiplicationApp.Utilities
 {
     public class PrimesSieveOfEratosthenes : IPrimeNumberGenerator
     {
-        public async Task<List<int>> GeneratePrimes(int n)
+        public Task<List<int>> GeneratePrimes(int n)
         {
             if(n <= 0)
             {
@@ -15,8 +15,8 @@ namespace PrimeNumberMultiplicationApp.Utilities
             }
 
             List<int> primenumbers = new List<int>();
-            primenumbers.AddRange(await GeneratePrimesSieveOfEratosthenes(n));
-            return primenumbers;
+            primenumbers.AddRange(GeneratePrimesSieveOfEratosthenes(n));
+            return Task.FromResult(primenumbers);
         }
 
         private  int ApproximateNthPrime(int nn)
@@ -61,27 +61,23 @@ namespace PrimeNumberMultiplicationApp.Utilities
             return bits;
         }
 
-        private async Task<List<int>> GeneratePrimesSieveOfEratosthenes(int n)
+        private List<int> GeneratePrimesSieveOfEratosthenes(int n)
         {
             List<int> primes = new List<int>();
-            await Task.Run(() =>
+            int limit = ApproximateNthPrime(n);
+            BitArray bits = SieveOfEratosthenes(limit);
+            for (int i = 0, found = 0; i < limit && found < n; i++)
             {
-                int limit = ApproximateNthPrime(n);
-                BitArray bits = SieveOfEratosthenes(limit);
-                for (int i = 0, found = 0; i < limit && found < n; i++)
+                if (bits[i])
                 {
-                    if (bits[i])
-                    {
-                        primes.Add(i);
-                        found++;
-                    }
+                    primes.Add(i);
+                    found++;
                 }
-                if (limit <= 11)
-                {
-                    primes.Add(limit);
-                }
-            });
-            
+            }
+            if (limit <= 11)
+            {
+                primes.Add(limit);
+            }
             return primes;
         }
     }
